@@ -2,4 +2,21 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="sage">#A3B18A</color>
+    <color name="cream">#FFF5E1</color>
+    <color name="light_sage">#8FA07D</color>
+    <color name="ivory_cream">#F7ECD4</color>
+    <color name="moss_sage">#6F8464</color>
+    <color name="soft_cream">#EFE2C6</color>
+    <color name="olive_sage">#556B4D</color>
+    <color name="warm_cream">#E6D7B9</color>
+    <color name="forest_sage">#3E513B</color>
+    <color name="dark_cream">#DAC8A3</color>
+    <color name="deep_sage">#2C3A2E</color>
+    <color name="vintage_cream">#CDBA93</color>
+    <color name="cafe_noir">#4C3D19</color>
+    <color name="kombu_green">#354024</color>
+    <color name="moss_green">#889063</color>
+    <color name="tan">#CFB899</color>
+    <color name="bone">#E5D7C4</color>
 </resources>
