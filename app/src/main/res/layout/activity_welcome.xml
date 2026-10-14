@@ -5,39 +5,157 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cream">
+    android:background="@color/light_sage">
 
-    <ImageView
-        android
-        android:layout_width="410dp"
-        android:layout_height="385dp"
-        android:src="@drawable/bg_lingkaran"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="85dp" />
-
-    <ImageView
-        android:id="@+id/logo_apk"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:src="@drawable/logo_apk"
-
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardBackgroundColor="@color/cream"
+        app:cardCornerRadius="32dp"
+        app:cardElevation="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.319" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins"
-        android:text="Mengajiku"
-        android:textColor="@color/deep_sage"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="141dp"
-        tools:layout_editor_absoluteY="356dp" />
+        <!-- INI DIA KUNCI UTAMANYA: ConstraintLayout di dalam CardView -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="24dp">
 
+            <ImageView
+                android:id="@+id/bgLingkaran"
+                android:layout_width="320dp"
+                android:layout_height="320dp"
+                android:contentDescription="@null"
+                android:src="@drawable/bg_lingkaran"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="24dp" />
+
+            <TextView
+                android:id="@+id/tvBintangAtas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="76dp"
+                android:layout_marginEnd="84dp"
+                android:text="✦"
+                android:textColor="#C5A45C"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/logo_apk"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:contentDescription="Logo Mengajiku"
+                android:scaleType="fitCenter"
+                android:src="@drawable/logo_apk"
+                app:layout_constraintBottom_toBottomOf="@id/bgLingkaran"
+                app:layout_constraintEnd_toEndOf="@id/bgLingkaran"
+                app:layout_constraintHorizontal_bias="0.491"
+                app:layout_constraintStart_toStartOf="@id/bgLingkaran"
+                app:layout_constraintTop_toTopOf="@id/bgLingkaran"
+                app:layout_constraintVertical_bias="0.458" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✧"
+                android:textColor="#D6AC50"
+                android:textSize="23sp"
+                app:layout_constraintTop_toTopOf="@id/logo_apk"
+                app:layout_constraintEnd_toEndOf="@id/logo_apk"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/tvNamaApk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/poppins"
+                android:text="Mengajiku"
+                android:textColor="@color/deep_sage"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bgLingkaran" />
+
+            <TextView
+                android:id="@+id/tvHadis"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/poppins"
+                android:gravity="center"
+                android:lineSpacingExtra="4dp"
+                android:text="Sebaik-baiknya kalian adalah orang yang belajar Al-Qur'an dan mengajarkannya&#10;(HR. Bukhari)"
+                android:textColor="@color/deep_sage"
+                android:textSize="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvNamaApk" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDaftarAkun"
+                android:layout_width="205dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/poppins"
+                android:text="Daftar Akun"
+                android:textAllCaps="false"
+                android:textColor="@color/cream"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/deep_sage"
+                app:cornerRadius="24dp"
+                app:elevation="4dp"
+                app:layout_constraintTop_toBottomOf="@id/tvHadis"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLogin"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="205dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/poppins"
+                android:text="Login"
+                android:textAllCaps="false"
+                android:textColor="@color/deep_sage"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/cream"
+                app:cornerRadius="24dp"
+                app:elevation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnDaftarAkun"
+                app:strokeColor="@color/deep_sage"
+                app:strokeWidth="1.5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="Belajar • Membaca • Mengamalkan"
+                android:textColor="@color/deep_sage"
+                android:textSize="16dp"
+                app:layout_constraintTop_toBottomOf="@id/btnLogin"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
