@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     android:background="@color/cream">
 
-    <!-- Tombol Back -->
 
     <!-- huruf -->
     <ImageView
@@ -50,7 +49,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:text="ا"
-                android:textColor="#263B2B"
+                android:textColor="@color/deep_sage"
                 android:textSize="32sp"
                 android:textStyle="bold" />
         </androidx.cardview.widget.CardView>
@@ -75,8 +74,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins"
-                android:text="Mari belajar huruf hijaiyah"
-                android:textColor="#666666"
+                android:text="Abjad atau huruf-huruf dasar yang digunakan untuk menuliskan bahasa Arab"
+                android:textColor="@color/deep_sage"
                 android:textSize="14sp" />
         </LinearLayout>
     </LinearLayout>
@@ -110,28 +109,28 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:background="@drawable/bg_kotak_hijaumuda"
+                    android:clickable="true"
+                    android:focusable="true"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="12dp"
-                    android:clickable="true"
-                    android:focusable="true" >
+                    android:padding="12dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
                         android:text="ا"
                         android:textColor="@color/deep_sage"
-                        android:fontFamily="@font/poppins"
                         android:textSize="40sp"
                         android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Alif"
                         android:fontFamily="@font/poppins"
+                        android:text="Alif"
 
                         android:textColor="@color/deep_sage"
                         android:textSize="17dp" />
